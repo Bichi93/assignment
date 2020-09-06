@@ -69,7 +69,8 @@
 
                 messageBox.empty();
 
-                const result = confirm('Do you want to delete')
+                const result = confirm('Do you want to delete');
+
                 if (result == true) {
                     $.ajax({
                         url: el.data('href'),
@@ -128,7 +129,7 @@
 
                         $('#user-table').prepend(response.view);
                         
-                        $('.delete-btn').deleteModel();
+                        $('.delete-btn-ajax').deleteModel();
 
                         modal.find('input').val('');
 

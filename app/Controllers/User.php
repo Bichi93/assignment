@@ -8,7 +8,7 @@ use App\Models\UserModel;
 
 class User extends BaseController
 {
-	public function create()
+	public function index()
 	{
 		$userModel = new UserModel();
 		$users = $userModel->findAll();
@@ -36,7 +36,7 @@ class User extends BaseController
 			$html .=  '<td>' . $selectedUser->email . '</td>';
 			$html .=  '<td>' . $selectedUser->phone . '</td>';
 			$html .=  '<td class="text-center">
-					<a  data-target="#tr-' . $selectedUser->id . '" data-message-container="#table-message-list" data-href="' . base_url('/user/destroy/' . $selectedUser->id) . '" class="btn btn-danger delete-btn"> Delete</a>
+					<a  data-target="#tr-' . $selectedUser->id . '" data-message-container="#table-message-list" data-href="' . base_url('/user/destroy/' . $selectedUser->id) . '" class="btn btn-danger delete-btn-ajax"> Delete</a>
 				</td>';
 			$html .=  '</tr>';
 
