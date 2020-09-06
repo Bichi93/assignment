@@ -136,7 +136,7 @@
                         setTimeout(function() {
                             modal.modal('hide');
                             modal.find('.error-list').empty();
-                        }, 1000);
+                        }, 300);
                         
 
                     },

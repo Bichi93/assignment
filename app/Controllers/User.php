@@ -71,7 +71,7 @@ class User extends BaseController
 		$validation->setRules([
 			'name' => 'required|min_length[3]|max_length[128]',
 			'last_name'  => 'required|min_length[3]|max_length[128]|string',
-			'email'  => 'required|valid_email',
+			'email'  => 'required|valid_email|is_unique[users.email]',
 			'phone'  => 'required|numeric'
 		]);
 
