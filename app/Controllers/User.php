@@ -2,8 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Entities\User as EntitiesUser;
-use CodeIgniter\HTTP\Request;
 use App\Models\UserModel;
 
 class User extends BaseController
